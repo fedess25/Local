@@ -1,4 +1,4 @@
-const productos = [
+export const productos = [
     {
         id : 0,
         categoria : "guitarra",
@@ -48,35 +48,4 @@ const productos = [
         precio : 3500 
     }
     
-]
-
-
-const cartProducts = []
-
-let productsContainer = document.getElementById("cards")
-
-
-function manejarClick(event) {
-    
-    const botonId = event.target.id;
-    let productosFiltrados = productos.filter(producto => producto.categoria == botonId)
-    
-    localStorage.setItem('categorias',JSON.stringify(productosFiltrados))
-
-    window.location.href = 'pages/categoria.html'
-    
-}
-
-// Selecciono todos los botones
-const botones = document.querySelectorAll('.boton-categoria')
-
-// Añado el evento a cada botón
-botones.forEach(boton => {
-    boton.addEventListener('click', manejarClick)
-})
-
-
-
-
-
-
+] // no funciono exportar la variable

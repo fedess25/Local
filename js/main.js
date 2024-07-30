@@ -3,49 +3,49 @@ const productos = [
         id : 0,
         categoria : "guitarra",
         marca : "fender",
-        precio : 2343 
+        precio : 2000 
     },
     {
         id : 1,
         categoria : "guitarra",
         marca : "gibson",
-        precio : 5841 
+        precio : 2200 
     },
     {
         id : 2,
         categoria : "bajo",
         marca : "cort",
-        precio : 2234 
+        precio : 2500 
     },
     {
         id : 3,
         categoria : "bajo",
         marca : "fender",
-        precio : 1256 
+        precio : 3000 
     },
     {
         id : 4,
         categoria : "bateria",
         marca : "parquer",
-        precio : 582 
+        precio : 5000 
     },
     {
         id : 5,
         categoria : "bateria",
         marca : "pearl",
-        precio : 897 
+        precio : 8000 
     },
     {
         id : 6,
         categoria : "teclado",
         marca : "yamaha",
-        precio : 2343 
+        precio : 2500 
     },
     {
         id : 7,
         categoria : "teclado",
         marca : "casio",
-        precio : 4537 
+        precio : 3500 
     }
     
 ]
@@ -69,22 +69,14 @@ function manejarClick(event) {
     
     const botonId = event.target.id;
     let productosFiltrados = productos.filter(producto => producto.categoria == botonId)
-    renderProductos(productosFiltrados)
-    console.log(productosFiltrados)
-    addToCartButton ()
+    
+    localStorage.setItem('categorias',JSON.stringify(productosFiltrados))
+
+    window.location.href = 'pages/categoria.html'
+    // renderProductos(productosFiltrados)
+    // console.log(productosFiltrados)
+    // addToCartButton ()
 }
-
-
-// Seleccionar todos los botones con la clase boton-categoria
-const botones = document.querySelectorAll('.boton-categoria')
-
-// Añadir el evento click a cada botón
-botones.forEach(boton => {
-    boton.addEventListener('click', manejarClick)
-})
-
-// console.log(categoriaProductos)
-// renderProductos(categoriaProductos)
 
 
 function addToCartButton () {
@@ -103,7 +95,16 @@ function addToCartButton () {
 }
 
 
+// Seleccionar todos los botones con la clase boton-categoria
+const botones = document.querySelectorAll('.boton-categoria')
 
+// Añadir el evento click a cada botón
+botones.forEach(boton => {
+    boton.addEventListener('click', manejarClick)
+})
+
+// console.log(categoriaProductos)
+// renderProductos(categoriaProductos)
 
 
 

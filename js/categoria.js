@@ -67,10 +67,11 @@ const cartProducts = []
 function mostrarCategoria(){
 categoria.forEach(producto => {
     const contenedor = document.createElement('div')
-    contenedor.innerHTML = `<h3>${producto.marca}</h3>
-                           <p>${producto.precio}</p>
-                           <button class="productoAgregar" id="${producto.id}"> Agregar </button>
-                           <img src="${producto.img}" alt=producto>`
+    contenedor.className = "cardp"
+    contenedor.innerHTML = `<img src="${producto.img}" alt=producto>
+                            <h3>${producto.marca}</h3>
+                            <p>${producto.precio}</p>
+                            <button class="productoAgregar" id="${producto.id}"> Agregar </button>`
     resultado.appendChild(contenedor)
     
 })}
@@ -81,6 +82,7 @@ function addToCartButton () {
         button.onclick = (e) => {
             const productId = e.currentTarget.id
             const selectedProduct = productos.find(producto => producto.id == productId)
+            //aca habria que hacer la validacion para el carrito
             cartProducts.push(selectedProduct)
 
             console.log(cartProducts)

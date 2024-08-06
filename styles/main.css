@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+h1{
+    margin: 15px;
+    text-align: center;
+}
+
+.flex-grow{
+    flex-grow: 0;
+}
+
 .logo-carrito img{
     width: 40px;
 }
@@ -69,4 +78,76 @@ iframe {
     height: 180px;
     padding: 10px;
     position: relative;
+}
+
+
+.cardsc{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 400px);
+    margin: 1rem 3rem 3rem 3rem;
+    gap: 2rem;
+    justify-items: center;
+}
+
+.cardp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 350px;
+    height: 400px;
+    border-radius: 20px 0px;
+    overflow: hidden;
+    background-color: rgb(175, 234, 200);
+    box-shadow: 1px 1px 7px 4px rgba(0, 0, 0, 0.75);
+    
+}
+
+.cardp img {
+    width: 100%;
+    height: auto;
+    height: 280px;
+}
+
+.cardsc .cardp:hover {
+    box-shadow: 1px 1px 14px 9px rgba(133, 1, 1, 0.75);
+}
+
+.carrito{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 100px);
+    margin: 1rem 3rem 3rem 3rem;
+    gap: 2rem;
+    justify-items: center;
+}
+
+.carritop{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 100px;
+    overflow: hidden;
+    background-color: rgb(175, 234, 200);
+    box-shadow: 1px 1px 7px 4px rgba(0, 0, 0, 0.75);
+}
+
+.carrito-img {
+    height: 100px;
+}
+
+.tachito {
+    height: 30px;
+    width: 30px;
+}
+
+.mas{
+    height: 15px;
+}
+
+.menos{
+    height: 15px;
 }

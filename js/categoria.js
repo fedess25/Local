@@ -70,7 +70,7 @@ categoria.forEach(producto => {
     contenedor.className = "cardp"
     contenedor.innerHTML = `<img src="${producto.img}" alt=producto>
                             <h3>${producto.marca}</h3>
-                            <p>${producto.precio}</p>
+                            <p>$${producto.precio}</p>
                             <button class="productoAgregar" id="${producto.id}"> Agregar </button>`
     resultado.appendChild(contenedor)
     

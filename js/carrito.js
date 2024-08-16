@@ -6,7 +6,7 @@ function renderCarrito () {
     cartStorage.forEach (producto => {
         const card = document.createElement("div")
         card.className = "carritop"
-        card.innerHTML = `<img src="./../img/mas.png" alt="agregar producto" class="mas">
+        card.innerHTML = `<button><img src="./../img/mas.png" alt="agregar producto" class="mas"></button>
                           <div id="contador">0</div>
                           <img src="./../img/menos.png" alt="quitar producto" class="menos">
                           <h3>${producto.marca}</h3>

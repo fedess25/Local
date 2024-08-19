@@ -55,24 +55,19 @@ const productos = [
         precio : 3500,
         img: './../img/teclado-casio.webp' 
     }
-    
 ]
 
-
-const cartProducts = []
-
 let productsContainer = document.getElementById("cards")
-
 
 function manejarClick(event) {
     
     const botonId = event.target.id;
+    
     let productosFiltrados = productos.filter(producto => producto.categoria == botonId)
     
     localStorage.setItem('categorias',JSON.stringify(productosFiltrados))
 
     window.location.href = 'pages/categoria.html'
-    
 }
 
 // Selecciono todos los botones

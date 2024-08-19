@@ -155,3 +155,27 @@ iframe {
 .atras{
     width: 70px;
 }
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    
+}
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    row-gap: 16px;
+    padding-top: 32px;
+}
+  
+  #comentario {
+    resize: none;
+    height: 150px;
+    width: 300px;
+}

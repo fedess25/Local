@@ -1,1 +1,0 @@
-Cliente:jorge, 1, 2, 3, 9, 2024-08-13 11:46:27.336538 Encargado:fede

@@ -23,15 +23,4 @@ function finalizarCompra(){
 
 renderCarrito()
 
-const boton = document.getElementById('confirmar')
-
-boton.onclick = function() {
-    Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Your work has been saved",
-        showConfirmButton: false,
-        timer: 1500
-      })
-}
 

@@ -23,6 +23,10 @@ function addToCartButton () {
             const productId = e.currentTarget.id
             const selectedProduct = categoria.find(producto => producto.id == productId)
             //aca habria que hacer la validacion para el carrito
+            // if (cartProducts.includes(selectedProduct)){
+            //     const cant = document.getElementById("contador")
+                // cant = cant + 1 
+            // })
             cartProducts.push(selectedProduct)
 
             console.log(cartProducts)

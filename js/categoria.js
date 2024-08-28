@@ -34,7 +34,7 @@ function addToCartButton (){
             else{
                 cartProducts.push(selectedProduct)
                 console.log(cartProducts)
-                // localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
+                
             }localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
         }
     })

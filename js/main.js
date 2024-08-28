@@ -4,56 +4,64 @@ const productos = [
         categoria : "guitarra",
         marca : "fender",
         precio : 2000,
-        img: './../img/guitarra-fender.jpg' 
+        img: './../img/guitarra-fender.jpg',
+        cant: 1 
     },
     {
         id : 1,
         categoria : "guitarra",
         marca : "gibson",
         precio : 2200,
-        img: './../img/guitarra-gibson.jpg'  
+        img: './../img/guitarra-gibson.jpg',
+        cant: 1  
     },
     {
         id : 2,
         categoria : "bajo",
         marca : "cort",
         precio : 2500,
-        img: './../img/bajo-cort.webp'
+        img: './../img/bajo-cort.webp',
+        cant: 1
     },
     {
         id : 3,
         categoria : "bajo",
         marca : "fender",
         precio : 3000,
-        img: './../img/bajo-fender.webp' 
+        img: './../img/bajo-fender.webp',
+        cant: 1 
     },
     {
         id : 4,
         categoria : "bateria",
         marca : "parquer",
         precio : 5000,
-        img: './../img/beteria-parquer.webp' 
+        img: './../img/beteria-parquer.webp',
+        cant: 1 
     },
     {
         id : 5,
         categoria : "bateria",
         marca : "pearl",
         precio : 8000,
-        img: './../img/bateria-pearl.webp' 
+        img: './../img/bateria-pearl.webp',
+        cant: 1 
     },
     {
         id : 6,
         categoria : "teclado",
         marca : "yamaha",
         precio : 2500,
-        img: './../img/teclado-yamaha.webp' 
+        img: './../img/teclado-yamaha.webp',
+        cant: 1 
     },
     {
         id : 7,
         categoria : "teclado",
         marca : "casio",
         precio : 3500,
-        img: './../img/teclado-casio.webp' 
+        img: './../img/teclado-casio.webp',
+        cant: 1 
     }
 ]
 

@@ -16,22 +16,26 @@ categoria.forEach(producto => {
     
 })}
 
-function addToCartButton () {
+function addToCartButton (){
     const addButton = document.querySelectorAll(".productoAgregar")
     addButton.forEach(button => {
         button.onclick = (e) => {
             const productId = e.currentTarget.id
             const selectedProduct = categoria.find(producto => producto.id == productId)
-            //aca habria que hacer la validacion para el carrito
-            // if (cartProducts.includes(selectedProduct)){
-            //     const cant = document.getElementById("contador")
-                // cant = cant + 1 
-            // })
-            cartProducts.push(selectedProduct)
+            
+            let esta = cartProducts.some(elemento => elemento.id == selectedProduct.id)
 
-            console.log(cartProducts)
+            console.log(esta)
 
-            localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
+            if (esta){
+                const repetido = cartProducts.find(producto => producto.id == selectedProduct.id)
+                repetido.cant+=1        
+            }
+            else{
+                cartProducts.push(selectedProduct)
+                console.log(cartProducts)
+                // localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
+            }localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
         }
     })
 }

@@ -67,6 +67,16 @@ const productos = [
 
 let productsContainer = document.getElementById("cards")
 
+
+
+fetch("./db/data.json")
+.then(response => response.json())
+.then(data => {
+    data.foreach(producto => {console.log(producto)})    
+})
+
+
+
 function manejarClick(event) {
     
     const botonId = event.target.id;

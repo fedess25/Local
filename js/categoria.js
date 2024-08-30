@@ -23,6 +23,7 @@ function addToCartButton (){
             const productId = e.currentTarget.id
             const selectedProduct = categoria.find(producto => producto.id == productId)
             
+            
             let esta = cartProducts.some(elemento => elemento.id == selectedProduct.id)
 
             console.log(esta)
@@ -32,8 +33,8 @@ function addToCartButton (){
                 repetido.cant+=1        
             }
             else{
+                
                 cartProducts.push(selectedProduct)
-                console.log(cartProducts)
                 
             }localStorage.setItem("cartProducts", JSON.stringify(cartProducts))
         }

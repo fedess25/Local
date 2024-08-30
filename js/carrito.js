@@ -1,22 +1,6 @@
-const cartStorage = JSON.parse(localStorage.getItem("cartProducts"))   //todos los productos
+let cartStorage = JSON.parse(localStorage.getItem("cartProducts"))   //todos los productos
 
-const cartContainer = document.getElementById("cart-section")
-
-// function filtraRepetidos(){
-//     let allproducts = []
-//     for (let i=0; i < cartStorage.lenght; i++){
-        
-//         allproducts = cartStorage[0]   
-
-//         const exits = allproducts.some(producto => producto.id === cartStorage[0].id)
-        
-//         if (exits){
-//             cartStorage[0].cant +=1
-//         }else{
-//             allproducts.push(cartStorage[0])
-//         }
-//       }return allproducts
-// }
+let cartContainer = document.getElementById("cart-section")
 
 function renderCarrito () {
     cartStorage.forEach (producto => {
@@ -28,10 +12,47 @@ function renderCarrito () {
                           <h3>${producto.marca}</h3>
                           <p>$${producto.precio}</p>
                           <img src="${producto.img}" alt="producto-carrito" class="carrito-img">
-                          <img src="./../img/tacho.png" alt="eliminar producto" class="tachito">`
+                          <button class="tachito" id="${producto.id}">Eliminar</button>`
         cartContainer.appendChild(card)
+        eliminar()
 })}
+
+function eliminar(){
+    let elimina= document.querySelectorAll(".tachito")
+    elimina.forEach(boton => boton.onclick = (e) =>{
+        let eliminaId = e.currentTarget.id
+        cartStorage = cartStorage.filter(producto => producto.id != eliminaId);
+        console.log(cartStorage)
+        cartContainer.innerHTML = ""
+        renderCarrito();
+    })
+}
 
 renderCarrito()
 
+
+// function disminuir(){
+//     const menos= document.querySelectorAll(".tachito")
+//     menos.forEach(boton => boton.onclick = (e) =>{
+//         const menosId = e.currentTarget.id
+//             const selectedProduct = cartStorage.find(producto => producto.id == menosId)
+//             selectedProduct.cant -=1
+//     })
+// }
+
+
+
+
+
+
+
+// const eliminar =document.querySelectorAll(".tachito")
+
+// eliminar.addEventListener('click', function() {
+//     console.log('¡El botón ha sido presionado!');
+// });
+//id="${producto.id}
+//<button class="tachito" id="${producto.id}">img src="./../img/tacho.png" alt="eliminar producto </button>
+//<a class="navbar-brand" href="./index.html"><img src="./img/logo.png" alt="logo de la web"></a>
+//<button><img src="./../img/tacho.png" alt="eliminar producto" class="mas" id ="${producto.id} ></button>
 

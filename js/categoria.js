@@ -22,11 +22,20 @@ function addToCartButton (){
         button.onclick = (e) => {
             const productId = e.currentTarget.id
             const selectedProduct = categoria.find(producto => producto.id == productId)
-            
+
             
             let esta = cartProducts.some(elemento => elemento.id == selectedProduct.id)
 
             console.log(esta)
+
+            Swal.fire({
+                position: "top-end",
+                width: "400",
+                icon: "success",
+                title: "producto agregado con exito",
+                showConfirmButton: false,
+                timer: 800
+                })
 
             if (esta){
                 const repetido = cartProducts.find(producto => producto.id == selectedProduct.id)

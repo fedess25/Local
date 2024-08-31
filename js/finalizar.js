@@ -1,5 +1,5 @@
 document.getElementById('formulario').addEventListener('submit', event => {
-    event.preventDefault(); // Evita que se envíe el formulario
+    event.preventDefault(); 
 
     // Obtener todos los inputs dentro del formulario
     const inputs = document.querySelectorAll('#formulario input');
@@ -13,7 +13,7 @@ document.getElementById('formulario').addEventListener('submit', event => {
     });
 
     if (allFieldsFilled) {
-        // Si todos los campos están completos, muestra el mensaje de éxito
+        
         console.log("todo bien")
                 Swal.fire({
                 position: "top-end",
@@ -23,7 +23,7 @@ document.getElementById('formulario').addEventListener('submit', event => {
                 timer: 1500
                 })
     }else{
-        // Si falta algún campo, muestra un mensaje de error    
+            
         console.log("faltan datos")
     }
 });

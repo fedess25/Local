@@ -1,8 +1,6 @@
-let cartStorage = JSON.parse(localStorage.getItem("cartProducts"))   //todos los productos
+let cartStorage = JSON.parse(localStorage.getItem("cartProducts"))
 
 let cartContainer = document.getElementById("cart-section")
-
-// let limpiar = document.getElementById("limpiar")
 
 function renderCarrito () {
     cartStorage.forEach (producto => {
@@ -55,25 +53,23 @@ function disminuir(){
     })
 }
 
-// function eliminarCarrito(){
-//     limpiar.addEventListener("limpiar", cartStorage =>{
-//         cartStorage=[]
-//         cartStorage.lenght=0
-//         console.log(cartStorage)
-//         cartContainer.innerHTML = ""
-//         renderCarrito()
-//     })}
-
 function vaciarCarrito() {
-    cartStorage.length = 0; // Vacía el array
+    cartStorage.length = 0;
     console.log(cartStorage)
     cartContainer.innerHTML = ""
-    renderCarrito(); // Actualiza la visualización del carrito
+    renderCarrito();
 }
 
 function eliminarCarrito(){
-// Agregar evento al botón de "Vaciar Carrito"
 document.getElementById('limpiar').addEventListener('click', vaciarCarrito);
+}
+
+function total (){
+    let suma = 0
+    cartStorage.forEach(producto => { suma += (producto.cant*producto.precio)})
+    
+    cartContainer.innerHTML = ""
+    renderCarrito()
 }
 renderCarrito()
 

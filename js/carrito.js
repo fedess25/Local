@@ -18,7 +18,9 @@ function renderCarrito () {
         aumentar()
         disminuir()
         eliminarCarrito()
-})}
+    })
+
+}
 
 function eliminar(){
     let elimina= document.querySelectorAll(".tachito")
@@ -67,7 +69,7 @@ document.getElementById('limpiar').addEventListener('click', vaciarCarrito);
 function total (){
     let suma = 0
     cartStorage.forEach(producto => { suma += (producto.cant*producto.precio)})
-    
+
     cartContainer.innerHTML = ""
     renderCarrito()
 }
